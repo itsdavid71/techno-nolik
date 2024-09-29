@@ -65,6 +65,7 @@
   background: #fcfcfc;
   position: relative;
   display: none;
+  animation: techno-dance 2s ease infinite;
 }
 
 .game-text {
@@ -144,6 +145,7 @@
   width: 200px;
   border: 1px solid #222;
   box-sizing: border-box;
+  background: #fff;
   height: 200px;
   position: relative;
   transition: 0.2s;
