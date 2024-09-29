@@ -8,6 +8,7 @@ const startForm = document.getElementById('start-form');
 const startFormField = document.getElementById('start-form-field');
 
 
+
 startForm.onsubmit = function(e) {
     e.preventDefault()
     const cellNum = inputStart.value
@@ -123,7 +124,17 @@ startForm.onsubmit = function(e) {
         setTimeout(() => {
             crossTurnSpeach.play()
         }, 4000);
-        audio.play()
+        
+        const backgroundSong = [
+            document.getElementById('bgSong1'),
+            document.getElementById('bgSong2'),
+            document.getElementById('bgSong3'),
+            document.getElementById('bgSong4'),
+            document.getElementById('bgSong5'),
+            document.getElementById('bgSong6')
+        ];
+        const randomBgSong = backgroundSong[Math.floor(Math.random() * backgroundSong.length)];
+        randomBgSong.play()
         
         const cells = []
         // 2. Сгенерировать поле

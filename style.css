@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #start-form-field {
   width: 100%;
   flex-wrap: wrap;
