@@ -597,3 +597,19 @@
     margin: 15px 0;
     text-align: center;
 }
+
+
+
+@media (max-width: 500px) {
+    .game-field {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 380px) {
+    .game-field {
+        width: 320px;
+        height: 320px;
+    }
+}
