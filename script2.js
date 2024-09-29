@@ -12,7 +12,7 @@ const startFormField = document.getElementById('start-form-field');
 startForm.onsubmit = function(e) {
     e.preventDefault()
     const cellNum = inputStart.value
-    if (cellNum < 2 || cellNum > 10) {
+    if (cellNum < 2 || cellNum > 10 || Number.isNaN(+cellNum) || cellNum == "") {
         // cellNum = Math.round(Math.random() * 8) + 2
         const stupidSpeach = document.getElementById('oggStupid')
         stupidSpeach.play()
