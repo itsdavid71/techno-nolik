@@ -101,6 +101,8 @@ startForm.onsubmit = function(e) {
         const welcomeSpeach = document.getElementById('oggWelcome')
         const crossWinSpeach = document.getElementById('oggCrossWin')
 
+        const sonata = document.getElementById('sonata')
+
         // const noughtTurnSpeach = document.getElementById('oggNoughtTurn')
         // const noughtTurnSpeach_2 = document.getElementById('oggNoughtTurn_2')
         // const noughtTurnSpeach_3 = document.getElementById('oggNoughtTurn_3')
@@ -125,6 +127,8 @@ startForm.onsubmit = function(e) {
             crossTurnSpeach.play()
         }, 4000);
         
+        sonata.play()
+        
         const backgroundSong = [
             document.getElementById('bgSong1'),
             document.getElementById('bgSong2'),
@@ -135,8 +139,7 @@ startForm.onsubmit = function(e) {
         ];
         const randomBgSong = backgroundSong[Math.floor(Math.random() * backgroundSong.length)];
         randomBgSong.volume = 0.5;
-        randomBgSong.play()
-        
+
         const cells = []
         // 2. Сгенерировать поле
         
@@ -251,6 +254,7 @@ startForm.onsubmit = function(e) {
                     turnCountGeneralCount--
                     // 3.3 Передача хода
                     turnCountGeneralText.innerText = `Осталось ходов: ${turnCountLeft[current]}`
+                    
                     if (!isWin) {
                         if (current === 'cross') {
                             textTurn.innerText = 'Нолики'
@@ -262,7 +266,12 @@ startForm.onsubmit = function(e) {
                             textTurn.classList.add('nought')
                             textTurn.classList.remove('cross')
                             turnCountLeft['cross']--
-                            console.log(turnCountLeft['cross'])
+                            app.classList.add('app-techno')
+                            randomBgSong.play()
+                            randomBgSong.volume = 0.5;
+                            sonata.volume = 0
+
+
                         } else {
                             textTurn.innerText = 'Крестики'
                             current = 'cross'
@@ -271,11 +280,13 @@ startForm.onsubmit = function(e) {
                             randomSpeech.play()
                             turnCountGeneralText.classList.add('cross')
                             turnCountGeneralText.classList.remove('nought')
+                            // randomBgSong.pause()
+                            randomBgSong.volume = 0
+                            sonata.volume = 1
                             textTurn.classList.add('cross')
                             textTurn.classList.remove('nought')
                             turnCountLeft['nought']--
-                            console.log(turnCountLeft['nought'])
-    
+                            app.classList.remove('app-techno')
                         }
         
                         
