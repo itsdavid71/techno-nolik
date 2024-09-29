@@ -134,6 +134,7 @@ startForm.onsubmit = function(e) {
             document.getElementById('bgSong6')
         ];
         const randomBgSong = backgroundSong[Math.floor(Math.random() * backgroundSong.length)];
+        randomBgSong.volume = 0.5;
         randomBgSong.play()
         
         const cells = []
