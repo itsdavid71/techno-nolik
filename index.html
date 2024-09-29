@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="start-form">
-        <div>
-            <input type="text" id="input-start" name="number" placeholder="Укажите число от 2 до 10 для формирования сетки">
-            <button id="input-start-button">Начать игру</button>
-        </div>
+    <div id="start-form-field">
+        <form id="start-form">
+            <input type="text" autocomplete="off" id="input-start" name="number" placeholder="Укажите число от 2 до 10 для формирования сетки">
+            <button type="submit" id="input-start-button">Начать игру</button>
+        </form>
     </div>
     <div id="app">
     </div>
@@ -26,9 +26,14 @@
     <!-- Озвучка -->
      <audio id="oggWelcome" src="audio/welcome.ogg"></audio>
      <audio id="oggCrossTurn" src="audio/cross-turn.ogg"></audio>
+     <audio id="oggCrossTurn_2" src="audio/cross-turn-2.ogg"></audio>
+     <audio id="oggCrossTurn_3" src="audio/cross-turn-3.ogg"></audio>
      <audio id="oggCrossWin" src="audio/cross-win.ogg"></audio>
      <audio id="oggNoughtTurn" src="audio/nought-turn.ogg"></audio>
+     <audio id="oggNoughtTurn_2" src="audio/nought-turn-2.ogg"></audio>
+     <audio id="oggNoughtTurn_3" src="audio/nought-turn-3.ogg"></audio>
      <audio id="oggNoughtWin" src="audio/nought-win.ogg"></audio>
+     <audio id="oggStupid" src="audio/stupid.ogg"></audio>
 
         <div class="popup" id="popup">
             <div class="body">
